@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="parent">
+      <div id="quotes"></div>
+      <br />
+      <div id="author"></div>
+      <br />
+      <button id="newQ">new quotes</button>
+    </div>
+
+    <script>
+      const quotes = document.getElementById('quotes');
+      const author = document.getElementById('author');
+      const newQ = document.getElementById('newQ');
+      let realData = '';
+      const getNewQuotes = async () => {
+        let rnum = Math.floor(Math.random() * 10);
+        // console.log(realData[rnum].text);
+        quotes.innerText = `${realData[rnum].text}`;
+        author.innerText = `${realData[rnum].author}`;
+      };
+      const getQuotes = async () => {
+        const api = 'https://type.fit/api/quotes';
+        try {
+          let data = await fetch(api);
+          realData = await data.json();
+          //console.log(realData.length);
+          getNewQuotes();
+        } catch (error) {}
+      };
+      newQ.addEventListener('click', getNewQuotes);
+      getQuotes();
+    </script>
+  </body>
+</html>
+
+<!-- till 21:20 -->

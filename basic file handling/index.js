@@ -11,6 +11,7 @@ var fs=require("fs");
 //fs.renameSync('read.txt','readwrite.txt');
 
 // exercise 1
+
 // fs.mkdirSync('node');
 //fs.writeFileSync('node/hello.txt',"this is my bio data");
 
@@ -21,4 +22,6 @@ var fs=require("fs");
 
 //fs.renameSync('node/hello.txt','amanbio.txt');
 
+
 fs.unlinkSync('amanbio.txt');
+

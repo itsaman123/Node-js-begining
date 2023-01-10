@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    height: 400px;
+    width: 450px;
+    background-color: rgb(169, 255, 142);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    align-items: center;
+    
+}
+#quotes{
+    text-align: center;
+    size: 80px;
+    margin-top: 170px;
+    
+    
+}
+button{
+    height: 50px;
+    width: 90px;
+    border-bottom: 2px solid rgb(252, 34, 34);
+    border-top: 2px solid rgb(34, 252, 154);
+    border-left: 2px solid rgb(227, 252, 34);
+    border-radius:10px;
+    margin-top: 108px;
+
+}
